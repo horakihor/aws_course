@@ -1,0 +1,16 @@
+{% macro check_if_ready(name, status) -%}
+{% if status -%}
+    <p> {{name}} status: <span style="color: green;">OK</span> </p>
+{% else %}
+    <p> {{name}} status: <span style="color: red;">FAIL</span> </p>
+{%- endif %}
+{%- endmacro %}
+<head>
+  <title>AWS Basics</title>
+</head>
+<body>
+  <h2>Hello!</h2>
+  <p>Hostname: {{hostname}}</p>
+  {{check_if_ready('PostgreSQL Connection', db_status)}}
+  <p> Visits: {{visits}} </p>
+</body>
