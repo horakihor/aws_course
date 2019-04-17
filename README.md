@@ -16,6 +16,7 @@ MacOS:
 Start Application
 -----------------
     cd app
+    brew install postgresql
     make setup
     make run POSTGRES_URL="localhost:5432"
 
