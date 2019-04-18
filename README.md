@@ -23,3 +23,8 @@ Start Application
 Init DB
 -------
     http://localhost/init
+
+
+Check App Status
+----------------
+    http://localhost
