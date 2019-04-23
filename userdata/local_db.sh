@@ -7,6 +7,7 @@ sudo yum -y group install "Development Tools"
 sudo yum -y install postgresql-server postgresql-contrib postgresql postgresql-devel
 sudo postgresql-setup initdb
 sudo sed -i 's/peer/trust/g' /var/lib/pgsql/data/pg_hba.conf
+sudo sed -i 's/ident/trust/g' /var/lib/pgsql/data/pg_hba.conf
 sudo systemctl start postgresql && sudo systemctl enable postgresql
 
 # Setup App
