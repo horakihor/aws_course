@@ -13,20 +13,13 @@ test:
 	$(call blue, "Run unit tests localy...")
 	.venv/bin/python manage.py test
 
-init:
-	$(call blue, "Run unit tests localy...")
-	.venv/bin/python manage.py db init
-
-migrate:
-	$(call blue, "Run unit tests localy...")
-	.venv/bin/python manage.py db migrate
-
-upgrade:
-	$(call blue, "Run unit tests localy...")
-	.venv/bin/python manage.py db upgrade
+boot:
+	@echo "Starting application..."
+	python3 -m venv .venv
+	.venv/bin/pip install -r requirements.txt
+	.venv/bin/python manage.py run
 
 define blue
-  @tput init
   @tput setaf 6
   @echo $1
   @tput sgr0
