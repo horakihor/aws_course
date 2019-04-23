@@ -26,7 +26,8 @@ upgrade:
 	.venv/bin/python manage.py db upgrade
 
 define blue
-	@tput setaf 6
-	@echo $1
-	@tput sgr0
+  @tput init
+  @tput setaf 6
+  @echo $1
+  @tput sgr0
 endef
