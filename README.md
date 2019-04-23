@@ -45,7 +45,7 @@ Setup PostgreSQL
     sudo sed -i 's/ident/trust/g' /var/lib/pgsql/data/pg_hba.conf
     sudo systemctl start postgresql && sudo systemctl enable postgresql
 
-Setup PostgreSQL
+Start Application
 ------------
     sudo git clone https://github.com/horakihor/aws_course.git /opt/aws_course
     cd /opt/aws_course/app/
