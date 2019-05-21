@@ -51,3 +51,13 @@ Start Application
     cd /opt/aws_course/app/
     sudo make setup
     sudo make run POSTGRES_URL="localhost:5432"
+
+# Setup Application EC2 - User Data
+
+We have 2 options to setup app with user-data:
+- Local-DB (Setup local PostgreSQL)
+- RDS-DB (Setup Application only)
+
+Put one of the scripts to the User-data field in AWS.
+
+Notes: Change RDS server hostname in user-data script before running.
