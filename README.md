@@ -75,3 +75,8 @@ Connect to private network with Bastion host
     ssh-add <key-name>.pem
     ssh -A ec2-user@<public-ip of bastion>
     ssh <private ip of web server>
+    
+ Setup CloudWatch logs manully
+ -----------------------------
+    sudo yum -y install https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
+    sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws_course/cloudwatch/cloudwatch-logs.json -s
