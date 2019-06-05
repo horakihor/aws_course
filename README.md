@@ -3,6 +3,11 @@ This is a demo Python app
 
 The main idea to start this application on EC2 instances and test different AWS services based on it.
 
+Architecture Diagram
+-------------------
+
+![Alt text](diagrams/architecture.png?raw=true "Architecture Diagram")
+
 # Setup Application Locally
 
 Prerequisite
