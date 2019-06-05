@@ -237,10 +237,10 @@ as=$(aws autoscaling create-auto-scaling-group \
 --target-group-arns ${target_group} \
 --health-check-type ELB \
 --health-check-grace-period 120 \
---min-size 1 \
+--min-size 2 \
 --desired-capacity 2 \
 --max-size 3 \
---tags "Name=web"
+--tags "Key=Name,Value=web" \
 --vpc-zone-identifier "${private_1_subnet},${private_2_subnet}"
 )
 

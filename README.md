@@ -54,10 +54,19 @@ Start Application
 
 # Setup Application EC2 - User Data
 
-We have 2 options to setup app with user-data:
+We have a few options to setup app with user-data:
 - Local-DB (Setup local PostgreSQL)
 - RDS-DB (Setup Application only)
+- RDS-CloudWatch (Setup Application + CloudWatch Agent)
 
 Put one of the scripts to the User-data field in AWS.
 
 Notes: Change RDS server hostname in user-data script before running.
+
+# Tips
+Connect to private network with Bastion host
+--------------------------------------------
+    ssh-agent
+    ssh-add <key-name>.pem
+    ssh -A ec2-user@<public-ip of bastion>
+    ssh <private ip of web server>
