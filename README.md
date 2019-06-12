@@ -68,6 +68,24 @@ Put one of the scripts to the User-data field in AWS.
 
 Notes: Change RDS server hostname in user-data script before running.
 
+# Lambda & Api Gateway
+
+Local Setup with SAM
+-----------
+    pip3 install aws-sam-cli
+
+Start Locally
+-------------
+    cd lambda
+    sam local start-api
+    curl http://127.0.0.1:3000/
+
+Build and Package
+-----------------
+    sam build
+    cd .aws-sam/build/myip
+    zip -r myip.zip .
+
 # Tips
 Connect to private network with Bastion host
 --------------------------------------------
@@ -75,7 +93,7 @@ Connect to private network with Bastion host
     ssh-add <key-name>.pem
     ssh -A ec2-user@<public-ip of bastion>
     ssh <private ip of web server>
-    
+
  Setup CloudWatch logs manully
  -----------------------------
     sudo yum -y install https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm

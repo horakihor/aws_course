@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: API Gateway with Lambda Token Authorizer
+Resources:
+  myip:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./myip
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        GetIP:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+
+Outputs:
+  ApiURL:
+    Description: "API URL"
+    Value: !Sub 'https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/'
