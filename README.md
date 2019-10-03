@@ -68,7 +68,7 @@ Put one of the scripts to the User-data field in AWS.
 
 Notes: Change RDS server hostname in user-data script before running.
 
-# Lambda & Api Gateway
+# Lambda & Api Gateway Localy
 
 Local Setup with SAM
 -----------
